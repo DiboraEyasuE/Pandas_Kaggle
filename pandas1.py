@@ -4,8 +4,6 @@ RGB = pd.DataFrame({"Red" :[255, 0, 0], "Green" : [0, 255, 0], "Blue" : [0, 0, 2
 fruit_sales = pd.DataFrame({"Apples" : [35, 41], "Bananas" : [21, 34]}, index = ['2017 Sales', '2018 Sales'])
 ingredients = pd.Series(['4 cups', '1 cup', '2 large', '1 can'], index = ['Flour', 'Milk', 'Eggs', 'Spam'], name='Dinner')
 
-survey = pd.read_csv("enterprise.csv")
-print(survey.shape)
-
 print(RGB)
 print(ingredients)
+print(fruit_sales)
