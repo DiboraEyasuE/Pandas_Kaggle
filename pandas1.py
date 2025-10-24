@@ -5,5 +5,6 @@ fruit_sales = pd.DataFrame({"Apples" : [35, 41], "Bananas" : [21, 34]}, index = 
 ingredients = pd.Series(['4 cups', '1 cup', '2 large', '1 can'], index = ['Flour', 'Milk', 'Eggs', 'Spam'], name='Dinner')
 
 print(RGB)
+print(RGB['Red'])
 print(ingredients)
 print(fruit_sales)
