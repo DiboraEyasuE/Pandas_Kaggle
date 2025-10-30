@@ -1,0 +1,3 @@
+SELECT COUNT(DISTINCT people)
+FROM industry_name_ANZSIC
+LIMIT 10;
