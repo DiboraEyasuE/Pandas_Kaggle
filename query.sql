@@ -1,3 +1,13 @@
-SELECT COUNT(DISTINCT people)
-FROM industry_name_ANZSIC
-LIMIT 10;
+-- This query is to solve cs50's fiftyville problem --
+
+-- Find people who called that day --
+SELECT p.id
+FROM people as p
+WHERE p.phone_number =
+(
+    SELECT caller
+    FROM phone_calls
+    WHERE month = 7
+    AND day = 28
+    AND duration < 60
+)

@@ -13,3 +13,5 @@ median_points = reviews.points.median()
 countries = reviews.country.unique()
 reviews_per_country = reviews.country.value_counts()
 centered_price = reviews.price.map(lambda prc: prc - reviews.price.mean())
+
+#Will veen this work ????????
