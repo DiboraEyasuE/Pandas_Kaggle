@@ -15,10 +15,22 @@ class Rectangle:
 
 
 class TestGetAreaRectangle(unittest.TestCase):
+    @classmethod
+    def setUpClass(rect):
+        rect.rectangle = Rectangle(0,0)
+        
     def normal_test(rect):
-        rectangle = Rectangle(2,3)
-        rect.assertEqual(rectangle.get_area(), 6, "incorrect area")
+        rect.rectangle.set_width(2)
+        rect.rectangle.set_height(3)
+        rect.assertEqual(rect.rectangle.get_area(), 6, "incorrect area")
+
     def test_geq(rect):
-        rectangle = Rectangle(2,3)
-        rect.assertGreaterEqual(rectangle.get_area(), -1)
+        rect.rectangle.set_width(22)
+        rect.rectangle.set_height(33)
+        rect.assertGreaterEqual(rect.rectangle.get_area(), -1)
+    
+    def test_assert_raises(rect):
+        with rect.assertRaises(ZeroDivisionError):
+            r = 1 / 0
+
 unittest.main()
