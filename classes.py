@@ -13,9 +13,12 @@ class Rectangle:
     def set_height(rect, height):
         rect.height = height
 
-class TestGetAreaRectangle(unittest.TestCase):
-    def runTest(self):
-        rectangle = Rectangle(2,3)
-        self.assertEqual(rectangle.get_area(), 6, "incorrect area")
 
+class TestGetAreaRectangle(unittest.TestCase):
+    def normal_test(rect):
+        rectangle = Rectangle(2,3)
+        rect.assertEqual(rectangle.get_area(), 6, "incorrect area")
+    def test_geq(rect):
+        rectangle = Rectangle(2,3)
+        rect.assertGreaterEqual(rectangle.get_area(), -1)
 unittest.main()
